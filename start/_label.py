@@ -3,6 +3,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
 from PyQt5.QtGui import QIcon
 from PyQt5.QtGui import QFont
+from PyQt5.QtCore import Qt
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -12,13 +13,18 @@ class MainWindow(QMainWindow):
         self.setWindowIcon(QIcon("../assets/icon.svg"))
 
         label = QLabel("Hello", self)
-        label.setFont(QFont("Arial",140))
+        label.setFont(QFont("Arial",16))
         label.setGeometry(0, 0, 500, 200)
         label.setStyleSheet("color: blue;"
         "background-color: red;"
         "font-weight: bold;"
         "font-style: italic;"
         )
+        # label.setAlignment(Qt.AlignBottom) # Text align
+        # label.setAlignment(Qt.AlignRight) # Text align
+
+        label.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter) # Text align
+
 
 def main():
     app = QApplication(sys.argv)
