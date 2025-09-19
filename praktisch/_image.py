@@ -8,7 +8,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("My First PyQt5 App")
-        self.setGeometry(100, 100, 400, 300)
+        self.setGeometry(100, 100, 600, 600)
         self.setWindowIcon(QIcon("../assets/icon.svg"))
 
         label = QLabel(self)
